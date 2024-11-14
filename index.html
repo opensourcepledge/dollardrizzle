@@ -3,6 +3,76 @@
   <head>
     <title>Dollar Drizzle</title>
     <meta charset="UTF-8" />
+    <style>
+      body {
+        background: #000000
+        url("bg.webp");
+        color: #00ff00;
+        font-family: "Comic Sans MS", cursive;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+        color: #ff00ff;
+        text-shadow: 2px 2px #ffff00;
+        animation: blink 1s infinite;
+      }
+
+      h2 {
+        color: #00ffff;
+        border-bottom: 3px double #ff00ff;
+      }
+
+      a {
+        color: #ff0000;
+        text-decoration: none;
+      }
+
+      a:hover {
+        background-color: #ffff00;
+        color: #000000;
+      }
+
+      table {
+        background: rgba(0, 0, 0, 0.8);
+        border: 3px solid #ff00ff;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      th,
+      td {
+        border: 1px solid #00ff00;
+        padding: 8px;
+      }
+
+      th {
+        background: #ff00ff;
+        color: #000000;
+      }
+
+      @keyframes blink {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      /* Add marquee effect */
+      .marquee {
+        background: #000000;
+        padding: 5px;
+        margin: 10px 0;
+      }
+    </style>
   </head>
   <body>
     <h1>Dollar Drizzle</h1>

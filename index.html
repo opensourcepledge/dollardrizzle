@@ -265,7 +265,9 @@
         dollar.style.animationDuration = (Math.random() * 10 + 10) + 's'; // 10-20 seconds
         document.body.appendChild(dollar);
       }
-      createDollar();
+      for (let i=0; i <= 64; i++) {
+        createDollar();
+      }
       setInterval(createDollar, 3000);
     </script>
   </body>

@@ -257,17 +257,20 @@
     </p>
 
     <script>
-      function createDollar() {
+      function createDollar(sMin = 10, sMax = 20) {
         const dollar = document.createElement("div");
         dollar.className = "dollar";
         dollar.textContent = "💸";
         dollar.style.left = Math.random() * 100 + "vw";
-        dollar.style.animationDuration = Math.random() * 10 + 10 + "s"; // 10-20 seconds
+        dollar.style.animationDuration =
+          Math.random() * (sMax - sMin) + sMin + "s";
         document.body.appendChild(dollar);
+        dollar.addEventListener("animationend", dollar.remove);
       }
-      for (let i = 0; i <= 64; i++) {
-        createDollar();
+      for (let i = 0; i <= 256; i++) {
+        createDollar(0.1, 10);
       }
+      createDollar();
       setInterval(createDollar, 3000);
     </script>
   </body>

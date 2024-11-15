@@ -5,22 +5,22 @@
     <meta charset="UTF-8" />
     <style>
       @font-face {
-        font-family: 'Comic Relief';
+        font-family: "Comic Relief";
         font-weight: normal;
         font-display: swap;
-        src: url(fonts/ComicRelief-Regular.woff2) format('woff2');
+        src: url(fonts/ComicRelief-Regular.woff2) format("woff2");
       }
       @font-face {
-        font-family: 'Comic Relief';
+        font-family: "Comic Relief";
         font-weight: bold;
         font-display: swap;
-        src: url(fonts/ComicRelief-Bold.woff2) format('woff2');
+        src: url(fonts/ComicRelief-Bold.woff2) format("woff2");
       }
 
       body {
         background: #000000 url(images/bg.webp);
         color: #00ff00;
-        font-family: 'Comic Sans MS', 'Comic Relief', cursive;
+        font-family: "Comic Sans MS", "Comic Relief", cursive;
         max-width: 800px;
         margin: 0 auto;
         padding: 20px;
@@ -114,7 +114,21 @@
 
     <h1>$1/mo to Open Source lfg</h1>
 
-    <br>
+    <br />
+
+    <h2>The Point</h2>
+
+    <p>
+      Open Source maintainers
+      <a href="https://cra.mr/lunch-isnt-free">need paid</a>.
+    </p>
+
+    <p>
+      Your company should join the
+      <a href="https://opensourcepledge.com/">Open Source Pledge</a>, but even
+      if you don't you should at least give $1/mo to your Open Source
+      dependencies.
+    </p>
 
     <h2>The Rules</h2>
 
@@ -171,18 +185,6 @@
     <h2>The Sticker Packs</h2>
 
     <img src="packpic.jpg" width="100%" />
-
-    <h2>The Point</h2>
-
-    <p>
-      The point of Dollar Drizzle Dayz is to raise awareness that
-      <a href="https://cra.mr/lunch-isnt-free"
-        >Open Source maintainers need paid</a
-      >. The <a href="https://opensourcepledge.com/">Open Source Pledge</a> is a
-      high bar. What's a low bar? $1/mo to your company's direct dependencies.
-      That's probably like $300/mo which is probably what your company spends on
-      granola bars or rice puff snacks or whatever.
-    </p>
 
     <h2>How To</h2>
 
@@ -258,14 +260,14 @@
 
     <script>
       function createDollar() {
-        const dollar = document.createElement('div');
-        dollar.className = 'dollar';
-        dollar.textContent = '💸';
-        dollar.style.left = Math.random() * 100 + 'vw';
-        dollar.style.animationDuration = (Math.random() * 10 + 10) + 's'; // 10-20 seconds
+        const dollar = document.createElement("div");
+        dollar.className = "dollar";
+        dollar.textContent = "💸";
+        dollar.style.left = Math.random() * 100 + "vw";
+        dollar.style.animationDuration = Math.random() * 10 + 10 + "s"; // 10-20 seconds
         document.body.appendChild(dollar);
       }
-      for (let i=0; i <= 64; i++) {
+      for (let i = 0; i <= 64; i++) {
         createDollar();
       }
       setInterval(createDollar, 3000);
